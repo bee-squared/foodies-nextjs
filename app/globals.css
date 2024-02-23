@@ -55,3 +55,13 @@ svg {
   font-weight: 500;
   color: #ddd8d8;
 }
+
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: #282c34
+}

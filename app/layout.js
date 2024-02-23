@@ -1,5 +1,5 @@
-import './globals.css';
-import Link from 'next/link';
+import MainHeader from '@/components/main-header';
+import '@/app/globals.css';
 
 export const metadata = {
   title: 'NextLevel Food',
@@ -11,20 +11,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="header-background">
-          <div style={{
-              position: 'absolute',
-              marginLeft: '10px',
-              marginTop: '10px',
-              display: 'flex',
-              flexDirection: 'row',
-              gap: '10px',
-              zIndex: 1000
-          }}>
-            <Link href='/meals'>Meals</Link>
-            <Link href='/meals/dynamic-page'>Dynamic Page</Link>
-            <Link href='/meals/share'>Share Page</Link>
-            <Link href='/community'>Community</Link>
-          </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -44,7 +30,7 @@ export default function RootLayout({ children }) {
             ></path>
           </svg>
         </div>
-
+        <MainHeader />
         {children}
       </body>
     </html>
