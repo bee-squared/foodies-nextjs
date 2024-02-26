@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import MainHeaderBackground from './main-header-background';
-
+import Link from "next/link";
+import Image from "next/image";
+import MainHeaderBackground from "./main-header-background";
 
 import logoImg from "@/assets/logo.png";
-import classes from './main-header.module.css';
-import NavLink from './nav-link';
+import classes from "./main-header.module.css";
+import NavLink from "./nav-link";
 
 export default function MainHeader() {
   return (
@@ -22,14 +21,14 @@ export default function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <NavLink href='/meals'>Browse Meals</NavLink>
+              <NavLink href="/meals">Browse Meals</NavLink>
             </li>
             <li>
-              <NavLink href='/community'>Community</NavLink>
+              <NavLink href="/community">Community</NavLink>
             </li>
           </ul>
         </nav>
       </header>
     </>
-  )
+  );
 }
