@@ -16,6 +16,7 @@ export default function ImagePicker({ label, name }) {
     const file = event.target.files[0]; // 0 index because we are only picking one file
 
     if (!file) {
+      setPickedImage(null);
       return;
     }
 
@@ -49,6 +50,7 @@ export default function ImagePicker({ label, name }) {
           name={name}
           ref={imageInput}
           onChange={handleImageChange}
+          required // This ensures that the <form> can't be submitted without an image being selected.
         />
         <button
           className={classes.button}
